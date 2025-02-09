@@ -18,7 +18,7 @@ app.get('*', async (c) => {
 export const startServer = () => {
   serve({
     fetch: app.fetch,
-    port: 3000
+    port: 3000,
   });
   console.log('Ready: http://localhost:3000');
-}
+};
