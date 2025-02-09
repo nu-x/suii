@@ -1,0 +1,17 @@
+{
+  "name": "suii-basic",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "suii dev"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "suii": "file:../suii"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3"
+  }
+}
