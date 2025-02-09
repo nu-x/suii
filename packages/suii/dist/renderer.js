@@ -3,21 +3,14 @@ import { renderToString } from 'react-dom/server';
 import fs from 'node:fs';
 import { pathToFileURL } from 'node:url';
 export const renderer = async (route) => {
-    console.log(`Renderer Route: ${route}`);
     let PageComponent;
-    if (!fs.existsSync(route)) {
-        const notFoundPath = pathToFileURL('src/pages/404.tsx').href;
-        if (fs.existsSync('src/pages/404.tsx')) {
-            const { default: NotFoundComponent } = await import(notFoundPath);
-            PageComponent = NotFoundComponent;
-        }
-        else {
-            return '<h1>404 Not Found</h1>';
-        }
-    }
-    else {
-        const { default: Component } = await import(route);
+    const filePath = pathToFileURL(route).href;
+    if (fs.existsSync(route)) {
+        const { default: Component } = await import(filePath);
         PageComponent = Component;
+    }
+    else if (route === null) {
+        return '<h1>404 - Not found</h1>';
     }
     const appHtml = renderToString(React.createElement(PageComponent));
     return `

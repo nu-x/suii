@@ -8,7 +8,6 @@ app.use('/static/*', serveStatic({ root: './public' }));
 app.get('*', async (c) => {
     const url = c.req.path;
     const route = resolveRoute(url);
-    console.log(`resolveRoute : ${route}`);
     const html = await renderer(route);
     return c.html(html);
 });
