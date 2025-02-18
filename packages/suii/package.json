@@ -1,6 +1,6 @@
 {
   "name": "suii",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "description": "Next-generation smooth react framework 💫",
   "type": "module",
   "keywords": [
@@ -11,6 +11,10 @@
   "bin": {
     "suii": "cli.js"
   },
+  "files": [
+    "cli.js",
+    "dist"
+  ],
   "scripts": {
     "build": "tsc"
   },
