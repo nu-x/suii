@@ -6,9 +6,9 @@ const args = process.argv.slice(2);
 const execPromise = promisify(exec);
 
 if (args[0] === 'dev') {
-  await execPromise('npx tsc');
+  await execPromise('npx esbuild "src/**/*.tsx" --outdir=dist --format=esm --target=esnext --jsx=automatic --platform=node --external:server.js');
   startServer();
 } else if(args[0] === 'build') {
-  await execPromise('npx esbuild src/**/*.tsx --outdir=dist --format=esm --target=esnext --jsx=automatic --platform=node');
+} else {
   console.error('Unknown command');
 }
