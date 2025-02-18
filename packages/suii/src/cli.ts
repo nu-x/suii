@@ -8,6 +8,7 @@ const execPromise = promisify(exec);
 if (args[0] === 'dev') {
   await execPromise('npx tsc');
   startServer();
-} else {
+} else if(args[0] === 'build') {
+  await execPromise('npx esbuild src/**/*.tsx --outdir=dist --format=esm --target=esnext --jsx=automatic --platform=node');
   console.error('Unknown command');
 }
