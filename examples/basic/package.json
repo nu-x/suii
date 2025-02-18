@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "suii dev"
+    "dev": "suii dev",
+    "build": "suii dev"
   },
   "dependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "suii": "file:../suii"
+    "suii": "1.0.3"
   },
   "devDependencies": {
     "@types/react": "^19.0.8",
