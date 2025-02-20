@@ -1,8 +1,7 @@
 <div align="center">
   <img src="./packages/suii/logo.png" width="200" />
+  <h1 style="font-size: 2.5rem;font-weight: 500;font-family:arial;">Suii.js</h1>
 </div>
-
-<h1 align="center" style="font-size: 2.5rem;font-weight: 500;font-family:arial;">Suii.js</h1>
 
 ## Description
 **Next-generation smooth react framework 💫**  
