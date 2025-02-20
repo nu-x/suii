@@ -1,8 +1,10 @@
 # Suii
+<img src="./packages/suii/logo.png" width="256" />
 
 ## Next-generation smooth react framework 💫
 
-### Suii (すいー) means smooth in Japanese. I wanted to create a framework that was very lightweight and ran smoothly, so I created this framework.
+## Description
+Suii (すいー) means smooth in Japanese. I wanted to create a framework that was very lightweight and ran smoothly, so I created this framework.
 
 ## Installation - manual
 ```llvm
