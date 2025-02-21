@@ -1,9 +1,6 @@
 <div align="center">
   <img src="./packages/suii/logo.png" width="200" />
   <h1 style="font-size: 2.5rem;font-weight: 500;font-family:arial;">Suii.js</h1>
-</div>
-
-<div align="center">
 
 [![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/nu-x/suii/ci.yaml)](https://github.com/nu-x/suii/actions)
 [![GitHub License](https://img.shields.io/github/license/nu-x/suii)](https://github.com/nu-x/suii/blob/main/LICENSE)
