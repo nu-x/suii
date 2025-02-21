@@ -5,6 +5,7 @@
 
 <div align="center">
 
+[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/nu-x/suii/ci.yaml)](https://github.com/nu-x/suii/actions)
 [![GitHub License](https://img.shields.io/github/license/nu-x/suii)](https://github.com/nu-x/suii/blob/main/LICENSE)
 [![NPM Version](https://img.shields.io/npm/v/suii)](https://www.npmjs.com/package/suii)
 [![GitHub last commit (branch)](https://img.shields.io/github/last-commit/nu-x/suii/main)](https://github.com/nu-x/suii/commits/main)
