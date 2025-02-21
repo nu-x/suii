@@ -23,4 +23,4 @@ jobs:
       - name:
         uses: actions/checkout@v4
       - name: Run lint
-        run: npm run lint
+        run: npm install && npm run lint
