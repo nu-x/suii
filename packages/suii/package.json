@@ -1,0 +1,19 @@
+{
+  "name": "suii",
+  "version": "0.1.1",
+  "description": "Next-generation smooth react framework 💫",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "suii": "cli.js"
+  },
+  "scripts": {},
+  "dependencies": {
+    "@hono/node-server": "^1.13.8",
+    "chokidar": "^4.0.3",
+    "esbuild": "^0.25.0",
+    "hono": "^4.7.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}
