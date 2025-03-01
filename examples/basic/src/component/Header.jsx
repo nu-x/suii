@@ -1,7 +1,8 @@
 const Header = () => {
   return (
-    <header>
-      <h1>Header</h1>
+    <header className='p-4 space-x-5'>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
     </header>
   );
 };

@@ -9,5 +9,8 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "suii": "file:../suii"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0"
   }
 }

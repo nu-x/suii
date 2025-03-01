@@ -2,10 +2,9 @@ import Header from '../component/Header.js';
 
 const About = () => {
   return (
-    <div>
+    <div className='container mx-auto'>
       <Header />
-      <h1>Aboaasdfsasut</h1>
-      <a href="/">Home</a>
+      <h1>Other page examples</h1>
     </div>
   );
 };
