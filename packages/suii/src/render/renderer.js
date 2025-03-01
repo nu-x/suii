@@ -9,13 +9,38 @@ export const renderer = async (route) => {
       'The "path" argument must be of type string. Received null'
     );
   }
+
   let PageComponent;
+  let metaTags = '';
   const filePath = pathToFileURL(route).href;
 
   if (fs.existsSync(route)) {
-    const { default: Component } = await import(filePath);
+    console.log('Importing:', filePath);
+    const { default: Component, meta } = await import(filePath);
+    console.log('Imported Component:', Component);
+    console.log('Meta Function:', meta);
+
+  if (!Component) {
+    throw new Error(`Component not found in ${filePath}`);
+  }
+  
     PageComponent = Component;
-  } else if (route === null) {
+
+    if (typeof meta === 'function') {
+      const metaData = meta();
+      metaTags = metaData
+        .map((metaItem) => {
+          if (metaItem.title) {
+            return `<title>${metaItem.title}</title>`;
+          }
+          const attrs = Object.entries(metaItem)
+            .map(([key, value]) => `${key}="${value}"`)
+            .join(' ');
+          return `<meta ${attrs}>`;
+        })
+        .join('\n');
+    }
+  } else {
     return '<h1>404 - Not found</h1>';
   }
 
@@ -27,11 +52,11 @@ export const renderer = async (route) => {
       <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My Suii App</title>
+        ${metaTags}
+        <script src='https://unpkg.com/@tailwindcss/browser@4'></script>
       </head>
       <body>
         <div id="__suii">${appHtml}</div>
-        <script src='https://unpkg.com/@tailwindcss/browser@4'></script>
       </body>
     </html>
   `;

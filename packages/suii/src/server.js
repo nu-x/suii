@@ -6,13 +6,11 @@ import { resolveRoute } from './render/router.js';
 
 const app = new Hono();
 
-app.use('/static/*', serveStatic({ root: './public' }));
+app.use('/*', serveStatic({ root: './public' }));
+app.use('/favicon.ico', serveStatic({ path: './public/favicon.ico' }));
 
 app.get('*', async (c) => {
   const url = c.req.path;
-  if (url === '/favicon.ico') {
-    return c.text('', 204);
-  }
   const route = resolveRoute(url);
   const html = await renderer(route);
   return c.html(html);
