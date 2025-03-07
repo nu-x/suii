@@ -10,6 +10,12 @@
 
 </div>
 
+<h1>
+Development is currently suspended!
+
+Looking for partners!
+</h1>
+
 ## Description
 **Next-generation smooth react framework 💫**  
 Suii (すいー) means smooth in Japanese. I wanted to create a framework that was very lightweight and ran smoothly, so I created this framework.
